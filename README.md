@@ -1,8 +1,8 @@
 # Koality D8 Theme Generator
 
-This is a fork of the [Media Current D8 Theme Generator](https://github.com/mediacurrent/theme_generator_8). At this point most all code and features are thanks to all the hard work they have done. The main differences at this point are the following features:
+This is a fork of the [Media Current D8 Theme Generator](https://github.com/mediacurrent/theme_generator_8). At this point most of the code and features are thanks to all the hard work they have done. The main differences at this point are the following features:
 
-* Auto add component libraries to the theme's library definition list which saves some key strokes
+* Auto add component libraries to the theme's library definition list which saves some keystrokes
 * Added the [Koality Flexbox Grid](https://github.com/fabean/flexbox-grid) as an install option
 
 > [Yeoman generator](http://yeoman.io/) for Drupal Themes - lets you quickly set up a Drupal 8 theme with sensible defaults and best practices.
@@ -26,7 +26,7 @@ themes/custom/my_awesome_theme
 
 ### First a note about using Node.js via [NVM](https://github.com/creationix/nvm)
 
-While not a requirement we like to use [NVM](https://github.com/creationix/nvm) to manage the version of Node per project. Here's a quick one liner that will create a `.nvmrc` file and install the latest stable version of Node using NVM.
+While not a requirement we like to use [NVM](https://github.com/creationix/nvm) to manage the version of Node per project. Here's a quick one-liner that will create a `.nvmrc` file and install the latest stable version of Node using NVM.
 
 ```bash
 nvm install stable | grep -ohe 'v[0-9]*\.[0-9]*\.[0-9]*' | head -1 > .nvmrc && nvm use
@@ -66,7 +66,7 @@ npm install -g yo generator-koality-theme
 yo koality-theme
 ```
 
-To see which generators and subgenerators you have, run `yo --help`.
+To see which generators and sub generators you have, run `yo --help`.
 
 **Update the generator as needed.**
 
@@ -104,7 +104,7 @@ yo koality-theme
 ```
 
 ### Component
-Generates component boiler plate based on whatever name you pass it. Please delete whatever you don't need. If you haven't modified it, you don't need it.
+Generates component boilerplate based on whatever name you pass it. Please delete whatever you don't need. If you haven't modified it, you don't need it.
 
 Example:
 
@@ -139,14 +139,14 @@ Or:
 yo koality-theme:js-behavior 'site-logo'
 ```
 
-By default this will put the new behavior in the components directory. For example if
+By default, this will put the new behavior in the components directory. For example if
 the component name you passed it was `site-logo`, it will generate a new behavior within:
 `src/components/site-logo/site-logo.es6.js`.
 
 The generated file is ES6 / ES2015 ready and can be compiled by the provided build tools.
 
 ### KSS Style Guide
-Generates a KSS Node style guide. You must pass it a name and a machine name for the theme if run independently of the main app. If run by itself this subgenerator has no way to modify your existing `gulpfile.js` Instead it will provide code you can copy and paste into your `gulpfile.js` for it to work correctly.
+Generates a KSS Node style guide. You must pass it a name and a machine name for the theme if run independently of the main app. If run by itself this sub generator has no way to modify your existing `gulpfile.js` Instead it will provide the code you can copy and paste into your `gulpfile.js` for it to work correctly.
 
 Example:
 
@@ -177,7 +177,7 @@ yo koality-theme:kss-style-guide --help
 ## The New Theme
 
 ### Sass & Gulp
-Currently your new theme uses [libSass](http://sass-lang.com/libsass) and [Gulp](http://gulpjs.com/). While you can add whichever Gulp plugins you'd like, by default only the basics are provided.
+Currently, your new theme uses [libSass](http://sass-lang.com/libsass) and [Gulp](http://gulpjs.com/). While you can add whichever Gulp plugins you'd like, by default only the basics are provided.
 
 * Gulp Sass
 * Gulp Autoprefixer
@@ -188,9 +188,9 @@ Currently your new theme uses [libSass](http://sass-lang.com/libsass) and [Gulp]
 * Gulp Babel
 * Gulp imagemin
 
-If you're not using `npm@5.0.0` or later (which generates a lockfile `package-lock.json`) consider using [shrinkwrap](https://docs.npmjs.com/cli/shrinkwrap).
+If you're not using `npm@5.0.0` or later (which generates a lock file `package-lock.json`) consider using [shrinkwrap](https://docs.npmjs.com/cli/shrinkwrap).
 
-After you've got the Gulp file modified to your hearts content, [shrinkwrap](https://docs.npmjs.com/cli/shrinkwrap) the dependencies so everyone uses the _exact_ same node modules.
+After you've got the Gulp file modified to your heart's content, [shrinkwrap](https://docs.npmjs.com/cli/shrinkwrap) the dependencies so everyone uses the _exact_ same node modules.
 
 ```bash
 npm shrinkwrap --save-dev
@@ -260,6 +260,6 @@ From the generator root directory [link](https://docs.npmjs.com/cli/link) your l
 npm link
 ```
 
-Now whenever you run `yo koality-theme` it'll use your locally cloned koality-theme generator. Any updates done to the generator can be tested in real time.
+Now, whenever you run `yo koality-theme` it'll use your locally cloned koality-theme generator. Any updates done to the generator can be tested in real time.
 
 Break off a feature branch dive right in. After you've got something you'd like to add, push back to the repo and pull request against master.
