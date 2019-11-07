@@ -2,13 +2,6 @@
 // Variables
 //=======================================================
 
-$zi-highest: 50;
-$zi-high: 40;
-$zi-medium: 30;
-$zi-low: 20;
-$zi-lowest: 10;
-$zi-ground: 0;
-$zi-below-ground: -1;
 
 <% if (koalitygrid) { %>
 // variables to override Koality Grid defaults
@@ -22,5 +15,18 @@ $lg: 1200px;
 $xl: 1440px;
 $jumbo: 1920px;
 
+$breakpoints: (
+  default: $default,
+  sm: $sm,
+  md: $md,
+  lg: $lg,
+  xl: $xl,
+  jumbo: $jumbo
+);
+
 $gutter-width: 15px;
+
+$flex-grid-count: 12;
+$flex-grow-default: 0;
+$flex-shrink-default: 1;
 <% } -%>
