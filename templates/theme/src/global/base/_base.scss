@@ -1,0 +1,23 @@
+@import 'fonts';
+@import 'normalize';
+
+html {
+  box-sizing: border-box;
+}
+
+// https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+* {
+  box-sizing: inherit;
+
+  &::before,
+  &::after {
+    box-sizing: inherit;
+  }
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  font-size: 100%;
+  overflow-x: hidden;
+}

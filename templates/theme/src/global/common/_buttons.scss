@@ -1,0 +1,23 @@
+.button {
+  background-color: $button-color;
+  display: inline-block;
+  padding: $button-padding;
+  color: $color-white;
+  text-decoration: none;
+  font-size: 14px;
+  text-transform: uppercase;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  a {
+    display: inline-block;
+    color: $color-white;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

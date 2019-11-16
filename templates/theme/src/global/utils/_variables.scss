@@ -1,0 +1,122 @@
+//=======================================================
+// Variables
+//=======================================================
+
+
+//===================
+// Koality Grid variables
+// https://github.com/fabean/flexbox-grid
+//===================
+$row-width: 1400px;
+$inner-row-width: 1200px;
+$gutter-width: 15px;
+$flex-grid-count: 12;
+$flex-grow-default: 0;
+$flex-shrink-default: 1;
+
+$default: 0;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$jumbo: 2000px;
+
+$breakpoints: (
+  default: $default,
+  sm: $sm,
+  md: $md,
+  lg: $lg,
+  xl: $xl,
+  jumbo: $jumbo
+);
+
+//===================
+// Extra Breakpoints
+//===================
+$sm-only: 0 $sm;
+$md-only: $md $lg;
+$lg-only: $lg $jumbo;
+
+$md-down: 0 $md;
+$xl-down: 0 $xl;
+$lg-down: 0 $lg;
+$jumbo-down: 0 $jumbo;
+
+$md-portrait: screen 0 $md (orientation landscape);
+$lg-portrait: screen (min-width $lg) (orientation landscape);
+$tablet-only: screen (min-width $md) (max-width $lg);
+
+
+//===================
+// Colors
+//===================
+$color-white: #FFF;
+$color-black: #000;
+
+//===================
+// Buttons
+//===================
+$button-padding: 8px 20px;
+$button-border-radius: 5px;
+$button-color: $color-black;
+
+//===================
+// Typography - Massive Typo Variables
+// https://github.com/fabean/massive-typo
+//===================
+$body-font-family: sans-serif;
+$body-font-size: 16px;
+$body-font-color: #0a0a0a;
+$body-line-height: 24px;
+$body-font-size-small: 0.85rem;
+$bold-font-weight: 700;
+
+// Headers
+$header-font-breakpoint: $md;
+$header-font-family: serif;
+$h1-size-small: 24px;
+$h1-size-medium: 48px;
+$h2-size-small: 20px;
+$h2-size-medium: 40px;
+$h3-size-small: 19px;
+$h3-size-medium: 31px;
+$h4-size-small: 18px;
+$h4-size-medium: 25px;
+$h5-size-small: 17px;
+$h5-size-medium: 20px;
+$h6-size-small: 16px;
+$h6-size-medium: $h6-size-small;
+
+// Code
+$code-font-family: monospace;
+$code-font-size: 0.9rem;
+$code-font-color: #0a0a0a;
+$code-background-color: #e6e6e6;
+$code-padding: 2px 4px;
+$code-border-radius: 4px;
+$code-border: 1px solid #cacaca;
+
+// Links
+$link-font-color: #337ab7;
+$link-font-hover-color: #23527c;
+$link-show-underline: false;
+$link-show-underline-hover: true;
+
+// Highlight <mark>
+$font-highlight-background: #fcf8e3;
+$font-highlight-padding: 0.2rem;
+
+// Blockquote
+$blockquote-margin: 32px 0;
+$blockquote-padding: 8px 16px;
+$blockquote-font-size: $body-font-size;
+$blockquote-border: 1px solid #DDDDDD;
+$blockquote-font-color: #6f6f6f;
+$blockquote-cite-font-size: 12px;
+$blockquote-cite-font-color: #555555;
+
+
+//===================
+// Cards
+//===================
+$card-shadow: 0 2px 4px rgba(0, 0, 0, 0.33);

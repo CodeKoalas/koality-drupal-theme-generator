@@ -1,0 +1,7 @@
+name: 'Koality Theme'
+type: module
+description: 'Generate your own Koality Theme'
+core: 8.x
+package: 'Custom'
+dependencies:
+  - components

@@ -1,0 +1,16 @@
+{{ global_library }}:
+  version: 1.0
+  css:
+    base:
+      dist/css/{{ global_library }}.css : {}
+  js:
+    #js/your_js.js : {}
+{% for library in libraries %}
+{{ library.library_name }}:
+  version: {{ library.library_version }}
+  css:
+    component:
+      dist/css/{{ library.library_name }}.css : {}
+  js:
+     #js/your_js.js : {}
+{% endfor %}

@@ -1,0 +1,41 @@
+.lg-desktop-only {
+  @include breakpoint($jumbo-down) {
+    display: none !important; // sass-lint:disable-line no-important
+  }
+}
+
+.desktop-only {
+  @include breakpoint($lg-down) {
+    display: none !important; // sass-lint:disable-line no-important
+  }
+
+  @include breakpoint($jumbo) {
+    display: none !important; // sass-lint:disable-line no-important
+  }
+}
+
+.tablet-only {
+  display: none !important; // sass-lint:disable-line no-important
+
+  @include breakpoint($tablet-only) {
+    display: block !important; // sass-lint:disable-line no-important
+  }
+}
+
+.mobile-only {
+  @include breakpoint($md) {
+    display: none !important; // sass-lint:disable-line no-important
+  }
+}
+
+.authenticated-user {
+  .show-for-anonymous {
+    display: none;
+  }
+}
+
+.anonymous-user {
+  .show-for-authenticated {
+    display: none;
+  }
+}

@@ -1,0 +1,96 @@
+//=======================================================
+// Mixins
+//=======================================================
+
+// Clearfix
+@mixin clearfix {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+// Makes an element visually hidden, but accessible.
+// @see http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+@mixin element-invisible {
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+// Turns off the element-invisible effect.
+@mixin element-invisible-off {
+  position: static !important;
+  clip: auto;
+  height: auto;
+  width: auto;
+  overflow: auto;
+}
+
+// Makes an element visually hidden by default, but visible when focused.
+@mixin element-focusable {
+  @include element-invisible;
+
+  &:active,
+  &:focus {
+    @include element-invisible-off;
+  }
+}
+
+// Helper function for working with Sass maps.
+// Example: @include print($configuration);
+@mixin print($declarations) {
+  @each $property, $value in $declarations {
+    #{$property}: $value;
+  }
+}
+
+@mixin ghost-button-mono($inverted: false) {
+  width: auto;
+  padding: $button-padding;
+  text-decoration: none;
+  transition: all 150ms ease;
+  cursor: pointer;
+
+  @if ($inverted == true) {
+    border: 2px solid $color-white;
+    border-radius: 0;
+    background-color: $color-black;
+    color: $color-white;
+
+    &:hover {
+      background-color: $color-white;
+      color: $color-black;
+      text-decoration: none;
+      transition: all 150ms ease;
+    }
+  } @else {
+    border: 2px solid $color-black;
+    border-radius: 0;
+    background-color: $color-white;
+    color: $color-black;
+
+    &:hover {
+      background-color: $color-black;
+      color: $color-white;
+      text-decoration: none;
+      transition: all 150ms ease;
+    }
+  }
+}
+
+%bust-out {
+  margin: {
+    left: calc(50% - 50vw);
+    right: calc(50% - 50vw);
+  }
+
+  transform: translateX(calc(50vw - 50%));
+}
+
+@mixin bust-out($margin-right: null, $margin-left: $margin-right, $aspect-ratio: null) {
+  @extend %bust-out !optional;
+}

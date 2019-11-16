@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains koality_theme.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function koality_theme_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the koality_theme module.
+    case 'help.page.koality_theme':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Generate your own Koality Theme') . '</p>';
+      return $output;
+
+    default:
+  }
+}

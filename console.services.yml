@@ -1,0 +1,11 @@
+services:
+  koality_theme.koality_theme_generate:
+    class: Drupal\koality_theme\Command\GenerateThemeCommand
+    arguments: ['@console.extension_manager', '@koality_theme.koality_theme_generate_generator', '@console.validator', '@app.root', '@theme_handler', '@console.site', '@console.string_converter']
+    tags:
+      - { name: drupal.command }
+  koality_theme.koality_theme_generate_generator:
+    class: Drupal\koality_theme\Generator\KoalityThemeGenerator
+    arguments: ['@console.extension_manager']
+    tags:
+      - { name: drupal.generator }
